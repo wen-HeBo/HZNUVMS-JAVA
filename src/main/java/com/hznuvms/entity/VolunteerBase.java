@@ -1,0 +1,36 @@
+package com.hznuvms.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author 温合博
+ * @since 2022-04-04
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class VolunteerBase implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @TableId(value = "b_id", type = IdType.AUTO)
+    private Integer bId;
+
+    private String bName;
+
+    private String bOrganization;
+
+    private Integer bStatus;
+
+    private String bInfo;
+
+}
